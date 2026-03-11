@@ -8,4 +8,3 @@ width = 5
 # Area =  length * breadth
 area = length * width
 print(f'The area of the rectangle is: {area}')
-

@@ -1,34 +1,25 @@
 #!/usr/bin/python3
 
-"""Number Guessing Emulator"""
+"""Number Guess Quiz"""
 
 import random
 
+# Random number to be matched by user input
+rand_num = random.randint(0, 20)
+print(rand_num)
 
-while True:
-    print("I'm thinking of a number between 1 and 10. Can you guess it?")
+# Variable taking user guess input
+guess = 0
 
-    # Random number to be matched by user's guess
-    secret_num = random.randint(1, 10)
-    print(secret_num)
+# Variable tracking number of guesses
+guess_no = 0
 
-    # Prompt user for input
-    guess = int(input('Guess a number'))
 
-    #counter to keep track for right number of guesses
-    counter = 0
-    match guess:
-        case _ if guess == secret_num:  # guess matched
-            print('Congratulations, you guessed it!')
-            counter = counter + 1
-            print(counter)
-        case _ if guess > 10:           # guess above expected range
-            print('Oops, your guess is a bit high. Try again!')
-        case _ if guess < 1:            # guess below range
-            print('Nope, your guess is a bit low. Give it another shot!')
-        case _:
-            print('Wrong guess, Try again.')
-    
-    play_again = input('Want to play again? Yes|No?').strip().lower()
-    if play_again != 'yes':
-        break
+while guess != rand_num:
+    # Keeps trcks of number of guesses
+    guess_no += 1
+    print(f'No of guesses {guess_no}')
+    # User's input or guess
+    guess = int(input('Guess a random number between 0 - 20: '))
+
+print(f'You got it right in {guess_no} tries!')

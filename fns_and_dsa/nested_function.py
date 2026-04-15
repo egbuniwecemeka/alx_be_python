@@ -8,7 +8,7 @@ def outer_func():
     outer_var = 10
     def inner_func():
         """Nested function, local to enclosing function"""
-        nonlocal outer_var
+        nonlocal outer_var  # enclose variable redefined using nonlocal keyword
         outer_var += 5
         print(f'{outer_var}')
     

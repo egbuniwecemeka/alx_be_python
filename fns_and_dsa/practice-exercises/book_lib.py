@@ -4,13 +4,13 @@
 
 book = {'title':'Think big', 'author': 'Ben Carson', 'genre': 'motivational'}
 
-# print a particular key
+# Retrieve a particular key
 print(book.get('genre'))
 
-# print the keys
+# Retrieve the keys
 print(book.keys())
 
-# print the values
+# Retrieve the values
 print(book.values())
 
 # Retrieve keys and values
